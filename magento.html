@@ -12,6 +12,7 @@
         background: #f8dd5c;
     }
     body {
+        margin: 0;
         height: 100%;
         width: 100%;
         display: table;
@@ -29,12 +30,13 @@
     }
     .list {
         list-style-type: none;
+        padding: 0;
     }
     .list-item {
         padding: 10px 0;
     }
     .link {
-        font-size: 1.5rem;
+        font-size: 1.5em;
         text-decoration: none;
         color: black;
     }
@@ -45,6 +47,11 @@
     .link:active,
     .link:hover {
         color: grey;
+    }
+    @media (max-width: 640px) {
+        body {
+            font-size: 12px;
+        }
     }
 </style>
 <body>
