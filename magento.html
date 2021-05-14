@@ -2,78 +2,196 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Useful Magento Links</title>
 </head>
 <style>
+    @font-face {
+        font-family: "Montserrat";
+        font-weight: normal;
+        src: url("fonts/Montserrat-Light.otf") format("opentype");
+    }
+
+    @font-face {
+        font-family: "Montserrat";
+        font-weight: 500;
+        src: url("fonts/Montserrat-Bold.otf") format("opentype")
+    }
+
+    @font-face {
+        font-family: "Montserrat";
+        font-weight: bold;
+        src: url("fonts/Montserrat-Black.otf") format("opentype");
+    }
+
     html {
         height: 100%;
-        background: #f8dd5c;
+        font-size: 10px;
     }
+
     body {
         margin: 0;
         height: 100%;
         width: 100%;
-        display: table;
-        text-align: center;
-        font-family: "PT Mono", "Courier New", sans-serif;
+        font-family: "Montserrat", Arial, sans-serif;
+        background-image: url(images/bg.png);
+        background-color: #FEDC3A;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
     }
+
+    .vertical-middle {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 100%;
+    }
+
     .container {
-        display: table-cell;
         height: 100%;
-        vertical-align: middle;
+        max-width: 1030px;
+        max-height: 605px;
+        margin: 0 auto;
+        padding: 50px;
     }
+
     .header {
+        text-align: left;
+        margin: 0;
         text-transform: uppercase;
         font-weight: bold;
+        font-size: 9.6rem;
+        max-width: 30%;
+        letter-spacing: .8rem;
     }
+
+    .list-container {
+        text-align: right;
+    }
+
     .list {
         list-style-type: none;
         padding: 0;
+        text-align: left;
+        display: inline-block;
+        margin: 0;
     }
+
     .list-item {
         padding: 10px 0;
+        font-size: 2.4rem;
+        letter-spacing: .02rem;
     }
+
+    .list-item:first-child {
+        padding-top: 0;
+    }
+
     .link {
-        font-size: 1.5em;
         text-decoration: none;
         color: black;
+    }
+
+    .link-small {
+        font-size: 1.8rem;
+        position: relative;
+        top: -5px;
     }
 
     .link:visited {
         color: black;
     }
+
     .link:active,
     .link:hover {
         color: grey;
     }
-    @media (max-width: 640px) {
+
+    .logo {
+        display: none;
+    }
+
+    @media (max-width: 1360px) {
+        .header {
+            font-size: 6.4rem;
+        }
+    }
+
+    @media (max-width: 768px) {
         body {
-            font-size: 12px;
+            padding: 20px;
+            background: white;
+            width: auto;
+        }
+
+        .header {
+            font-weight: 500;
+            padding: 30px 0;
+            background-image: url(images/header-bg.png);
+            width: 100%;
+            max-width: 100%;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: contain;
+        }
+
+        .logo {
+            display: block;
+            max-width: 30%;
+        }
+
+        .list-container {
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .vertical-middle {
+            position: static;
+            top: 0;
+            transform: none;
+        }
+
+        .container {
+            padding: 0;
         }
     }
 </style>
 <body>
-    <div class="container">
-        <h1 class="header">Magento Useful Links</h1>
-        <ul class="list">
-            <li class="list-item">
-                <a class="link" target="_blank" href="https://docs.google.com/presentation/d/1LLalaKMbPXBVWdV7ieUfSaBYdJBZWRdEId-zXGBDUz8/edit?usp=sharing">Magento Architecture Overview<br><small>Slides from RnDPHP</small></a>
-            </li>
-            <li class="list-item">
-                <a class="link" target="_blank" href="https://devdocs.magento.com/guides/v2.4/architecture/bk-architecture.html">Architecture Guide</a>
-            </li>
-            <li class="list-item">
-                <a class="link" target="_blank" href="https://devdocs.magento.com/guides/v2.4/extension-dev-guide/bk-extension-dev-guide.html">Developer Guide</a>
-            </li>
-            <li class="list-item">
-                <a class="link" target="_blank" href="https://docs.magento.com/user-guide/">Module Reference Guide</a>
-            </li>
-            <li class="list-item">
-                <a class="link" target="_blank" href="https://docs.magento.com/user-guide/">User Guide</a>
-            </li>
-        </ul>
+    <img class="logo" src="images/logo.png">
+    <div class="vertical-middle">
+        <div class="container">
+            <h1 class="header">Magento Useful Links</h1>
+            <div class="list-container">
+                <ul class="list">
+                    <li class="list-item">
+                        <a class="link" target="_blank"
+                           href="https://docs.google.com/presentation/d/1LLalaKMbPXBVWdV7ieUfSaBYdJBZWRdEId-zXGBDUz8/edit?usp=sharing">Magento
+                            Architecture Overview<br><span class="link-small">Slides from RnDPHP</span></a>
+                    </li>
+                    <li class="list-item">
+                        <a class="link" target="_blank"
+                           href="https://devdocs.magento.com/guides/v2.4/architecture/bk-architecture.html">Architecture
+                            Guide</a>
+                    </li>
+                    <li class="list-item">
+                        <a class="link" target="_blank"
+                           href="https://devdocs.magento.com/guides/v2.4/extension-dev-guide/bk-extension-dev-guide.html">Developer
+                            Guide</a>
+                    </li>
+                    <li class="list-item">
+                        <a class="link" target="_blank" href="https://docs.magento.com/user-guide/">Module Reference Guide</a>
+                    </li>
+                    <li class="list-item">
+                        <a class="link" target="_blank" href="https://docs.magento.com/user-guide/">User Guide</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>
